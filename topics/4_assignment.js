@@ -1,8 +1,7 @@
-
 module("About Assignment (topics/4_assignment.js)");
 
 test("local variables", function() {
-    var temp = __;
+    var temp = 1;
     equals(1, temp, "Assign a value to the variable temp");
 });
 
@@ -18,7 +17,7 @@ test("no block scope", function() {
   } catch(e){
     isInnerVariableDefined = false;
   }
-  equals(result, __, "there is no block scope");
+  equals(isInnerVariableDefined, true, "there is no block scope");
 });
 
 test("function scope", function() {
@@ -27,19 +26,19 @@ test("function scope", function() {
     // this is a self-invoking function. Notice that it calls itself at the end ().
     (function() {
         var innerVariable = "inner";
-        equals(outerVariable, __, 'is outerVariable defined in this scope?');
-        equals(innerVariable, __, 'is innerVariable defined in this scope?');
+        equals(outerVariable, "outer", 'is outerVariable defined in this scope?');
+        equals(innerVariable, "inner", 'is innerVariable defined in this scope?');
     })();
 
-    equals(outerVariable, __, 'is outerVariable defined in this scope?');
+    equals(outerVariable, "outer", 'is outerVariable defined in this scope?');
     var isInnerVariableDefined = true;
     try {
         innerVariable
     } catch(e) {
         isInnerVariableDefined = false;
     }
-    equals(isInnerVariableDefined, __, 'is innerVariable defined in this scope?');
-}););
+    equals(isInnerVariableDefined, false, 'is innerVariable defined in this scope?');
+});
 
 temp = 1;
 test("global variables", function() {
@@ -49,5 +48,5 @@ test("global variables", function() {
     //by the programmer, so they introduced "use strict" in ES5. If you really want
     //to make a global var use windows.myVar = value instead, but make sure not to
     //override any existing properties!
-    equals(temp, window.__, 'global variables are assigned to the window object');
-}
+    equals(temp, window.temp, 'global variables are assigned to the window object');
+});

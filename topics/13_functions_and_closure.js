@@ -8,14 +8,14 @@ test("defining functions directly", function() {
         result = "b";
     };	
     changeResult();
-    equals(result, __, 'what is the value of result?');
+    equals(result, "b", 'what is the value of result?');
 });
 
 test("assigning functions to variables", function() {
     var triple = function(input) {
         return input * 3;
     };
-    equals(triple(4), __, 'what is triple 4?');		
+    equals(triple(4), 12, 'what is triple 4?');		
 });
 
 test("self invoking functions", function() {		
@@ -24,12 +24,12 @@ test("self invoking functions", function() {
     // self invoking functions are used to provide scoping and to alias variables
     (function(pv) {
         var secretValue = "password";
-        equals(pv, __, 'what is the value of pv?');
-        equals(typeof(secretValue), "__", "is secretValue available in this context?");
-        equals(typeof(publicValue), "__", "is publicValue available in this context?");
+        equals(pv, "shared", 'what is the value of pv?');
+        equals(typeof(secretValue), "string", "is secretValue available in this context?");
+        equals(typeof(publicValue), "string", "is publicValue available in this context?");
     })(publicValue);
 
-    equals(typeof(secretValue), "__", "is secretValue available in this context?");
-    equals(typeof(publicValue), "__", "is publicValue available in this context?");
+    equals(typeof(secretValue), "undefined", "is secretValue available in this context?");
+    equals(typeof(publicValue), "string", "is publicValue available in this context?");
 });
 
