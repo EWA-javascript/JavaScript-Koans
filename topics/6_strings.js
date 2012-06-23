@@ -1,5 +1,5 @@
 
-module("About Strings (topics/about_strings.js)");
+module("About Strings (topics/6_strings.js)");
 
 test("delimiters", function() {
     var singleQuotedString = 'apple';

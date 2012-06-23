@@ -1,4 +1,4 @@
-module("About this (topics/about_this.js)");
+module("About this (topics/14_this.js)");
 
 test("'this' inside a method", function () {
 	var person = {

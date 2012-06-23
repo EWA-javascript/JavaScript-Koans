@@ -1,4 +1,4 @@
-module("About Reflection (topics/about_reflection.js)");
+module("About Reflection (topics/10_reflection.js)");
 
 var A = function() {
     this.aprop = "A";    

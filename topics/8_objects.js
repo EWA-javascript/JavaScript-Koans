@@ -1,5 +1,5 @@
 
-module("About Objects (topics/about_objects.js)");
+module("About Objects (topics/8_objects.js)");
 
 test("object type", function() {
     var empty_object = {};

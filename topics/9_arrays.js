@@ -1,5 +1,5 @@
 
-module("About Arrays (topics/about_arrays.js)");
+module("About Arrays (topics/9_arrays.js)");
 
 test("array literal syntax and indexing", function() {
     var favouriteThings = ["cellar door", 42, true]; // note that array elements do not have to be of the same type

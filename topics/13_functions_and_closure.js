@@ -1,5 +1,5 @@
 
-module("About Functions And Closure (topics/about_functions_and_closure.js)");
+module("About Functions And Closure (topics/13_functions_and_closure.js)");
 
 test("defining functions directly", function() {
     var result = "a";

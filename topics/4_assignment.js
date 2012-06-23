@@ -1,5 +1,5 @@
 
-module("About Assignment (topics/about_assignment.js)");
+module("About Assignment (topics/4_assignment.js)");
 
 test("local variables", function() {
     var temp = __;

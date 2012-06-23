@@ -1,7 +1,7 @@
 // demonstrate objects prototype chain
 
 // https://developer.mozilla.org/en/JavaScript/Guide/Inheritance_and_the_prototype_chain
-module("About Prototype Chain (topics/about_prototype_chain.js)");
+module("About Prototype Chain (topics/11_prototype_chain.js)");
 
 var father = {
   b: 3,

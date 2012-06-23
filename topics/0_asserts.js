@@ -1,5 +1,5 @@
 
-module("About Asserts (topics/about_asserts.js)");
+module("About Asserts (topics/0_asserts.js)");
 
 test("ok", function() {
     ok(__, 'what will satisfy the ok assertion?');
