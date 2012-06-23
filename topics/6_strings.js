@@ -18,17 +18,9 @@ test("character Type", function() {
     equals(characterType, __, 'Javascript has no character type');
 });
 
-test("escape character", function() {
-    var stringWithAnEscapedCharacter  = "\u0041pple";
-    equals(stringWithAnEscapedCharacter, __, 'what  is the value of stringWithAnEscapedCharacter?');
-});
-
 test("string.length", function() {
     var fruit = "apple";
     equals(fruit.length, __, 'what is the value of fruit.length?');
 });
 
-test("slice", function() {
-    var fruit = "apple pie";
-    equals(fruit.slice(0,5), __, 'what is the value of fruit.slice(0,5)?');
-});
+

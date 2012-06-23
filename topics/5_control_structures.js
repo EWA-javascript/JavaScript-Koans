@@ -18,7 +18,7 @@ test("for", function() {
 });
 
 test("for in", function() {
-	// this syntax will be explained in about objects
+	// this syntax will be explained in  8_objects
 	var person = {
 		name: "Amory Blaine",
 		age: 102
@@ -69,6 +69,7 @@ test("switch default case", function() {
 });
 
 test("null coallescion", function() {
+    //assigns the first value if it's "truthy", else the second value
     var result = null || "a value";
     equals(result, __, 'what is the value of result?');
 });

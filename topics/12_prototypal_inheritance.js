@@ -37,24 +37,3 @@ test("calling functions added to a prototype after an object was created", funct
     // for the following statement asks the paul object to call a function that was added to the Mammal prototype after paul was constructed.
     equals(paul.numberOfLettersInName(), __, "how long is Paul's name?");
 });
-
-// helper function for inheritance. 
-// From https://developer.mozilla.org/en/JavaScript/Guide/Inheritance_Revisited
-function extend(child, supertype){  
-    child.prototype = supertype.prototype;  
-} 
-
-// "Subclass" Mammal
-function Bat(name, wingspan) {
-    Mammal.call(this, name);
-    this.wingspan = wingspan;
-}	
-
-// configure inheritance
-extend(Bat, Mammal);
-
-test("Inheritance", function() {
-    var lenny = new Bat("Lenny", "1.5m");
-    equals(lenny.sayHi(), __, "what does Lenny say?");
-    equals(lenny.wingspan, __, "what is Lenny's wingspan?");
-});

@@ -1,5 +1,5 @@
 
-module("About Regular Expressions (topics/16_regular_expressions.js)");
+module("About Regular Expressions (topics/15_regular_expressions.js)");
 
 test("exec", function() {
     var numberFinder = /(\d).*(\d)/;
