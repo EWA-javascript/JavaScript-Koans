@@ -18,7 +18,7 @@ test("no block scope", function() {
   } catch(e){
     isInnerVariableDefined = false;
   }
-  equals(result, __, "there is no block scope");
+  equals(isInnerVariableDefined, true, "there is no block scope");
 });
 
 test("function scope", function() {
@@ -39,7 +39,7 @@ test("function scope", function() {
         isInnerVariableDefined = false;
     }
     equals(isInnerVariableDefined, __, 'is innerVariable defined in this scope?');
-}););
+});
 
 temp = 1;
 test("global variables", function() {
@@ -50,4 +50,4 @@ test("global variables", function() {
     //to make a global var use windows.myVar = value instead, but make sure not to
     //override any existing properties!
     equals(temp, window.__, 'global variables are assigned to the window object');
-}
+});

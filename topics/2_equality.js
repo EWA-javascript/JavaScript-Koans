@@ -20,11 +20,11 @@ test("equality with type coercion", function() {
 
 test("why type coercion is bad", function() {
     // Can you guess all of them?
-    equals(0 == '', '__');
-    equals('' == '0', '__');
-    equals(0 == [0], '__');
-    equals(0 == false, '__');
-    equals(',,,' == new Array(4), '__');
+    equals(0 == '', __);
+    equals('' == '0', __);
+    equals(0 == [0], __);
+    equals(0 == false, __);
+    equals(',,,' == new Array(4), __);
 });
 
 test("string literals", function() {
